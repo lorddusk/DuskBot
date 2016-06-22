@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="log-path">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="file-log" fileName="${log-path}/Log.log"
+                     filePattern="${log-path}/Log-old-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="file-log2" fileName="${log-path}/Pirc/PIRC.log"
+                     filePattern="${log-path}/PIRC-old-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="file-log3" fileName="${log-path}/Chat/Chat.log"
+                     filePattern="${log-path}/Chat-old-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="file-log4" fileName="${log-path}/Chat/Responses/Chat.log"
+                     filePattern="${log-path}/Chat-old-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="nl.lang2619.bot.Bot" level="info" additivity="false">
+            <appender-ref ref="file-log" level="info"/>
+        </Logger>
+
+        <Logger name="org.pircbotx.PircBotX" level="info" additivity="false">
+            <appender-ref ref="file-log2" level="info"/>
+        </Logger>
+
+        <Logger name="org.pircbotx.InputParser" level="info" additivity="false">
+            <appender-ref ref="file-log3" level="info"/>
+        </Logger>
+
+        <Logger name="org.pircbotx.output.OutputRaw" level="info" additivity="false">
+            <appender-ref ref="file-log4" level="info"/>
+        </Logger>
+
+        <Root level="info" additivity="false">
+            <appender-ref ref="console"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

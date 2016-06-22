@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.lang2619.bot.MainController">
+    <children>
+        <TabPane fx:id="tabPane" layoutY="26.0" prefHeight="548.0" prefWidth="710.0">
+            <tabs>
+                <Tab closable="false" text="Config">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="707.0">
+                            <children>
+                                <AnchorPane prefHeight="500.0" prefWidth="740.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="10.0">
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                    <children>
+                                        <SplitPane layoutX="14.0" layoutY="14.0" prefHeight="482.0" prefWidth="662.0">
+                                            <items>
+                                                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="671.0">
+                                                    <children>
+                                                        <TextField fx:id="botText" layoutX="146.0" layoutY="14.0" />
+                                                        <Label layoutX="14.0" layoutY="18.0" text="Bot Twitch Name" />
+                                                        <TextField fx:id="oauthText" layoutX="146.0" layoutY="54.0" />
+                                                        <Label layoutX="14.0" layoutY="98.0" text="Streamers Name" />
+                                                        <Label layoutX="14.0" layoutY="138.0" text="Points" />
+                                                        <TextField fx:id="streamerText" layoutX="146.0" layoutY="94.0" />
+                                                        <TextField fx:id="pointText" layoutX="146.0" layoutY="134.0" />
+                                                        <Button fx:id="btnProperties" layoutX="14.0" layoutY="228.0" mnemonicParsing="false" onAction="#changeProperties" prefHeight="25.0" prefWidth="282.0" text="Update Properties" />
+                                                        <Label layoutX="14.0" layoutY="58.0" text="OAuth Password" />
+                                                        <Label layoutX="354.0" layoutY="18.0" text="Link Toggler" />
+                                                        <Label layoutX="354.0" layoutY="48.0" text="Caps Toggler" />
+                                                        <Label layoutX="354.0" layoutY="78.0" text="Wall of Text Toggler" />
+                                                        <Label layoutX="354.0" layoutY="108.0" text="Whisper Toggler" />
+                                                        <Label layoutX="354.0" layoutY="138.0" text="Schedule Toggler" />
+                                                        <Label layoutX="356.0" layoutY="172.0" text="CTT" />
+                                                        <TextField fx:id="cttText" layoutX="486.0" layoutY="168.0" prefHeight="25.0" prefWidth="154.0" />
+                                                        <CheckBox fx:id="linkToggle" layoutX="486.0" layoutY="18.0" mnemonicParsing="false" />
+                                                        <CheckBox fx:id="capsToggle" layoutX="486.0" layoutY="48.0" mnemonicParsing="false" />
+                                                        <CheckBox fx:id="wotToggle" layoutX="486.0" layoutY="78.0" mnemonicParsing="false" />
+                                                        <CheckBox fx:id="whisperToggle" layoutX="486.0" layoutY="108.0" mnemonicParsing="false" />
+                                                        <CheckBox fx:id="scheduleToggle" layoutX="486.0" layoutY="138.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="152.0" />
+                                                        <Button fx:id="btnExtras" layoutX="357.0" layoutY="228.0" mnemonicParsing="false" onAction="#extraProperties" prefHeight="25.0" prefWidth="282.0" text="Update Extra Properties" />
+                                                        <Separator layoutX="316.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="22.0" />
+                                                        <Separator layoutY="255.0" prefHeight="25.0" prefWidth="660.0" />
+                                                        <Label layoutX="18.0" layoutY="293.0" text="New Subscriber" />
+                                                        <Label layoutX="18.0" layoutY="329.0" text="Recurring Subscriber" />
+                                                        <TextField fx:id="newSubText" layoutX="147.0" layoutY="289.0" prefHeight="25.0" prefWidth="492.0" />
+                                                        <TextField fx:id="oldSubText" layoutX="147.0" layoutY="325.0" prefHeight="25.0" prefWidth="492.0" />
+                                                        <Button fx:id="btnUpdateSub" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#updateSub" prefHeight="25.0" prefWidth="624.0" text="Update Subscriber Messages" />
+                                                        <Separator layoutY="389.0" prefHeight="25.0" prefWidth="660.0" />
+                                                        <Button fx:id="toggleBtn" layoutX="14.0" layoutY="414.0" mnemonicParsing="false" onAction="#toggle" prefHeight="54.0" prefWidth="625.0" text="Stream is toggled OFF" textAlignment="CENTER" textFill="RED">
+                                                            <font>
+                                                                <Font name="System Bold" size="25.0" />
+                                                            </font>
+                                                        </Button>
+                                          <Label layoutX="14.0" layoutY="181.0" text="Partner?" />
+                                          <CheckBox fx:id="chatToggle" layoutX="145.0" layoutY="181.0" mnemonicParsing="false" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Commands">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="682.0">
+                                    <children>
+                                        <ListView fx:id="commandList" prefHeight="323.0" prefWidth="682.0" />
+                                        <Label layoutY="338.0" text="Command" />
+                                        <TextField fx:id="commandText" layoutX="109.0" layoutY="335.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <TextField fx:id="responseText" layoutX="109.0" layoutY="375.0" prefHeight="25.0" prefWidth="572.0" />
+                                        <Label layoutY="379.0" text="Response" />
+                                        <ChoiceBox fx:id="permBox" layoutX="109.0" layoutY="416.0" prefHeight="25.0" prefWidth="223.0" />
+                                        <Label layoutY="420.0" text="Permission Level" />
+                                        <Button fx:id="deleteCommandBtn" layoutX="480.0" layoutY="460.0" mnemonicParsing="false" onAction="#deleteCommand" prefHeight="25.0" prefWidth="200.0" text="Delete" />
+                                        <Button fx:id="editCommandBtn" layoutX="240.0" layoutY="460.0" mnemonicParsing="false" onAction="#editCommand" prefHeight="25.0" prefWidth="200.0" text="Edit" />
+                                        <Button fx:id="addCommandBtn" layoutY="460.0" mnemonicParsing="false" onAction="#addCommand" prefHeight="25.0" prefWidth="200.0" text="Add" />
+                                        <Button fx:id="clearCommandBtn" layoutX="370.0" layoutY="416.0" mnemonicParsing="false" onAction="#clearCommand" prefHeight="25.0" prefWidth="310.0" text="Clear Inputs" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Quotes">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="682.0">
+                                    <children>
+                                        <ListView fx:id="qouteList" prefHeight="323.0" prefWidth="682.0" />
+                                        <Label layoutY="338.0" text="Quote #" />
+                                        <TextField fx:id="quoteText" layoutX="109.0" layoutY="335.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <Label layoutY="379.0" text="Response" />
+                                        <TextField fx:id="quoteResponseText" layoutX="109.0" layoutY="375.0" prefHeight="25.0" prefWidth="572.0" />
+                                        <Button fx:id="deleteQuoteBtn" layoutX="480.0" layoutY="460.0" mnemonicParsing="false" onAction="#deleteQoute" prefHeight="25.0" prefWidth="200.0" text="Delete" />
+                                        <Button fx:id="editQuoteBtn" layoutX="240.0" layoutY="460.0" mnemonicParsing="false" onAction="#editQoute" prefHeight="25.0" prefWidth="200.0" text="Edit" />
+                                        <Button fx:id="addQuoteBtn" layoutY="460.0" mnemonicParsing="false" onAction="#addQoute" prefHeight="25.0" prefWidth="200.0" text="Add" />
+                                        <Button fx:id="clearQuoteBtn" layoutY="416.0" mnemonicParsing="false" onAction="#clearQoute" prefHeight="25.0" prefWidth="680.0" text="Clear Inputs" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Permissions">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="682.0">
+                                    <children>
+                                        <ListView fx:id="permissionList" prefHeight="323.0" prefWidth="682.0" />
+                                        <Label layoutY="338.0" text="User" />
+                                        <TextField fx:id="userText" layoutX="109.0" layoutY="335.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <ChoiceBox fx:id="permsBox" layoutX="109.0" layoutY="379.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <Label layoutY="379.0" text="Permission Level" />
+                                        <Button fx:id="editPermBtn" layoutX="352.0" layoutY="460.0" mnemonicParsing="false" onAction="#editPerm" prefHeight="25.0" prefWidth="328.0" text="Edit" />
+                                        <Button fx:id="addPermBtn" layoutY="460.0" mnemonicParsing="false" onAction="#addPerm" prefHeight="25.0" prefWidth="328.0" text="Add" />
+                                        <Button fx:id="clearPermBtn" layoutY="416.0" mnemonicParsing="false" onAction="#clearPerm" prefHeight="25.0" prefWidth="680.0" text="Clear Inputs" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Ranks">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="682.0">
+                                    <children>
+                                        <ListView fx:id="rankList" prefHeight="323.0" prefWidth="682.0" />
+                                        <Label layoutY="338.0" text="Rank" />
+                                        <TextField fx:id="rankText" layoutX="109.0" layoutY="335.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <TextField fx:id="costText" layoutX="109.0" layoutY="375.0" prefHeight="25.0" prefWidth="572.0" />
+                                        <Label layoutY="379.0" text="Cost" />
+                                        <Button fx:id="deleteRankBtn" layoutX="480.0" layoutY="460.0" mnemonicParsing="false" onAction="#deleteRank" prefHeight="25.0" prefWidth="200.0" text="Delete" />
+                                        <Button fx:id="editRankBtn" layoutX="240.0" layoutY="460.0" mnemonicParsing="false" onAction="#editRank" prefHeight="25.0" prefWidth="200.0" text="Edit" />
+                                        <Button fx:id="addRankBtn" layoutY="460.0" mnemonicParsing="false" onAction="#addRank" prefHeight="25.0" prefWidth="200.0" text="Add" />
+                                        <Button fx:id="clearRankBtn" layoutY="416.0" mnemonicParsing="false" onAction="#clearPoints" prefHeight="25.0" prefWidth="680.0" text="Clear Inputs" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="User Ranks">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="682.0">
+                                    <children>
+                                        <ListView fx:id="userRankList" prefHeight="323.0" prefWidth="682.0" />
+                                        <Label layoutY="338.0" text="User" />
+                                        <TextField fx:id="userRankText" layoutX="109.0" layoutY="335.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <TextField fx:id="currentRankText" layoutX="109.0" layoutY="375.0" prefHeight="25.0" prefWidth="244.0" />
+                                        <Label layoutY="379.0" text="Rank" />
+                                        <Button fx:id="editUserRankBtn" layoutX="352.0" layoutY="460.0" mnemonicParsing="false" onAction="#editUserRank" prefHeight="25.0" prefWidth="328.0" text="Edit" />
+                                        <Button fx:id="deleteUserRankBtn" layoutY="460.0" mnemonicParsing="false" onAction="#deleteUserRank" prefHeight="25.0" prefWidth="328.0" text="Delete" />
+                                        <Button fx:id="clearUserRankBtn" layoutY="416.0" mnemonicParsing="false" onAction="#clearUserRank" prefHeight="25.0" prefWidth="680.0" text="Clear Inputs" />
+                                        <ChoiceBox fx:id="rankBox" layoutX="390.0" layoutY="375.0" prefHeight="25.0" prefWidth="290.0" />
+                                        <Label layoutX="357.0" layoutY="379.0" text="- Or -" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Points">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="491.0" prefWidth="682.0">
+                                    <children>
+                                        <ListView fx:id="pointList" prefHeight="289.0" prefWidth="682.0" />
+                                        <Label layoutY="338.0" text="Username" />
+                                        <TextField fx:id="userPointsText" layoutX="109.0" layoutY="335.0" prefHeight="25.0" prefWidth="573.0" />
+                                        <TextField fx:id="pointsText" layoutX="109.0" layoutY="375.0" prefHeight="25.0" prefWidth="572.0" />
+                                        <Label layoutY="378.0" text="Points" />
+                                        <Button fx:id="deletePointsBtn" layoutY="460.0" mnemonicParsing="false" onAction="#deletePoints" prefHeight="25.0" prefWidth="328.0" text="Delete" />
+                                        <Button fx:id="editPointsBtn" layoutX="352.0" layoutY="460.0" mnemonicParsing="false" onAction="#editPoints" prefHeight="25.0" prefWidth="328.0" text="Edit" />
+                                        <Button fx:id="clearPointsBtn" layoutY="416.0" mnemonicParsing="false" onAction="#clearPoints" prefHeight="25.0" prefWidth="680.0" text="Clear Inputs" />
+                                        <Label layoutY="298.0" text="Search User" />
+                                        <TextField fx:id="searchText" layoutX="109.0" layoutY="295.0" prefHeight="25.0" prefWidth="257.0" />
+                                        <Button fx:id="searchBtn" layoutX="384.0" layoutY="295.0" mnemonicParsing="false" onAction="#searchUser" prefHeight="25.0" prefWidth="296.0" text="Search" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="DebugTab" closable="false" disable="true" text="Debug">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextArea fx:id="area" layoutX="12.0" layoutY="10.0" prefHeight="500.0" prefWidth="685.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <MenuBar prefHeight="25.0" prefWidth="710.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exitProgram" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <CheckMenuItem fx:id="debugCheck" mnemonicParsing="false" onAction="#debugTab" text="Debug" />
+                  <MenuItem fx:id="helpVersion" mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
